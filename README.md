@@ -149,12 +149,12 @@ interface UITool {
 
 | Категория | Описание | Примеры |
 |-----------|----------|---------|
-| 🏗️ Фреймворки | JS фреймворки | React, Vue, Angular, Svelte, Solid.js |
-| 🚀 Мета-фреймворки | Full-stack фреймворки | Next.js, Nuxt, SvelteKit, Astro |
-| 🎨 Стилизация | CSS инструменты | Tailwind CSS |
-| 🧩 UI Компоненты | Библиотеки компонентов | Shadcn, Mantine, Radix, MUI, Chakra, DaisyUI |
-| ⭐ Иконки | SVG иконки | Lucide, Heroicons |
-| ⚡ Анимации | Библиотеки анимаций | Framer Motion, GSAP |
+| Фреймворки | JS фреймворки | React, Vue, Angular, Svelte, Solid.js |
+| Мета-фреймворки | Full-stack фреймворки | Next.js, Nuxt, SvelteKit, Astro |
+| Стилизация | CSS инструменты | Tailwind CSS |
+| UI Компоненты | Библиотеки компонентов | Shadcn, Mantine, Radix, MUI, Chakra, DaisyUI |
+| Иконки | SVG иконки | Lucide, Heroicons |
+| Анимации | Библиотеки анимаций | Framer Motion, GSAP |
 
 ## Tech Radar
 
@@ -162,20 +162,20 @@ interface UITool {
 
 | Кольцо | Цвет | Описание |
 |--------|------|----------|
-| ADOPT | 🟢 | Готово к продакшену |
-| TRIAL | 🔵 | Попробовать в пилотных проектах |
-| ASSESS | 🟡 | Изучить для будущих проектов |
-| HOLD | 🔴 | Не рекомендовать для новых проектов |
+| ADOPT | | Готово к продакшену |
+| TRIAL | | Попробовать в пилотных проектах |
+| ASSESS | | Изучить для будущих проектов |
+| HOLD | | Не рекомендовать для новых проектов |
 
 ## Готовые стеки
 
 | Стек | Сложность | Для кого |
 |------|-----------|----------|
-| 🚀 React Starter | Easy | Начинающие |
-| 🎨 Vue Starter | Easy | Начинающие |
-| ⚡ Next.js Production | Medium | SSR проекты |
-| 🪶 Svelte Minimal | Easy | Landing pages |
-| 📝 Content Site | Easy | Блоги, документация |
+| React Starter | Easy | Начинающие |
+| Vue Starter | Easy | Начинающие |
+| Next.js Production | Medium | SSR проекты |
+| Svelte Minimal | Easy | Landing pages |
+| Content Site | Easy | Блоги, документация |
 
 ## Вклад
 
@@ -192,7 +192,7 @@ interface UITool {
 MIT License - используйте свободно
 
 
-**Сделано с ❤️ используя Next.js, Tailwind CSS и Framer Motion**
+**Сделано с используя Next.js, Tailwind CSS и Framer Motion**
 
 
 ## Features
