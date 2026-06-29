@@ -1,124 +1,69 @@
 # UI Radar
 
-> Интерактивный гид по выбору инструментов для веб-разработки
+An interactive tool for choosing the optimal technology stack for web development -- compare frameworks, get personalized recommendations, explore ready-made stacks, and plan a learning path.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?logo=tailwind-css)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Features
 
-## Table of Contents
+- 20+ tools across 6 categories with filtering by category, recommendation status, and beginner difficulty
+- Radar Chart visualization for tool ratings across 6 dimensions (design, integration, learning, documentation, community, performance)
+- Side-by-side comparison of up to 3 tools with visual metrics
+- Tech Radar classification: ADOPT / TRIAL / ASSESS / HOLD with reasoning
+- 5 ready-made stacks for different scenarios (React Starter, Vue Starter, Next.js Production, Svelte Minimal, Content Site)
+- 6-stage learning path from HTML/CSS/JS to meta-frameworks with time visualization
+- Interactive stack selection flow: project type, team size, experience level
+- Tool data exported as typed JSON with bundle size, trend, difficulty, and GitHub/npm stats
 
-- [О проекте](#о-проекте)
-- [Возможности](#возможности)
-- [Технологии](#технологии)
-- [Запуск](#запуск)
-- [Установка зависимостей](#установка-зависимостей)
-- [Запуск dev сервера](#запуск-dev-сервера)
-- [Проверка линтера](#проверка-линтера)
-- [Структура проекта](#структура-проекта)
-- [Данные](#данные)
-- [Категории инструментов](#категории-инструментов)
-- [Tech Radar](#tech-radar)
-- [Готовые стеки](#готовые-стеки)
-- [Вклад](#вклад)
-- [Лицензия](#лицензия)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [License](#license)
+## Tech Stack
 
-## О проекте
+- **Framework** - Next.js 16 (App Router)
+- **Language** - TypeScript 5
+- **Styling** - Tailwind CSS 4
+- **UI Components** - Radix UI
+- **Animations** - Framer Motion
+- **Icons** - Lucide React
+- **Database** - Prisma (SQLite)
 
-**UI Radar** — это интерактивный инструмент для выбора оптимального технологического стека для веб-разработки. Помогает разработчикам:
+## Getting Started
 
-- Сравнивать фреймворки и библиотеки по множеству критериев
-- Получать персонализированные рекомендации на основе типа проекта
-- Изучать готовые технологические стеки с объяснениями
-- Планировать путь обучения
+### Prerequisites
 
-## Возможности
+- Node.js 20+ or Bun
 
-### Главная страница
-- Статистика по инструментам
-- Категории с быстрым переходом
-- Интерактивный выбор стека (тип проекта → команда → опыт)
-
-### Инструменты
-- 20+ инструментов в 6 категориях
-- Фильтрация по категории, рекомендации, сложности для новичков
-- Radar Chart визуализация рейтингов
-- Сравнение до 3 инструментов
-
-### Tech Radar
-- Классификация по кольцам: ADOPT / TRIAL / ASSESS / HOLD
-- Объяснение причин классификации
-
-### Готовые стеки
-- 5 проверенных стеков для разных задач
-- Детальные объяснения WHY (почему эти инструменты вместе)
-- Объяснение каждого инструмента в стеке
-
-### Путь обучения
-- 6 этапов от HTML/CSS/JS до мета-фреймворков
-- Визуализация времени обучения
-- Индикаторы сложности
-
-### Сравнение
-- Side-by-side сравнение до 3 инструментов
-- Визуальные метрики и рейтинг
-
-## Технологии
-
-| Категория | Технология |
-|-----------|------------|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 4 |
-| UI Components | Radix UI |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Database | Prisma (SQLite) |
-
-## Запуск
+### Installation
 
 ```bash
-## Установка зависимостей
+git clone https://github.com/stsgs1980/UI-RADAR.git
+cd UI-RADAR
 bun install
+```
 
-## Запуск dev сервера
+### Run
+
+```bash
 bun run dev
-
-## Проверка линтера
-bun run lint
 ```
 
-Приложение будет доступно на `http://localhost:3000`
+The application will be available at `http://localhost:3000`.
 
-## Структура проекта
+## Project Structure
 
-```css
-src/
-├── app/
-│   ├── page.tsx          # Главная страница (все компоненты)
-│   ├── layout.tsx        # Layout с темой
-│   └── globals.css       # Глобальные стили
-├── components/
-│   ├── ui/               # shadcn/ui компоненты
-│   └── DynamicBackground.tsx
-├── lib/
-│   └── utils.ts          # Утилиты (cn и др.)
-└── data/
-    └── ui-radar-data.json # Экспортированные данные
+- `src/app/page.tsx` - Main page with all components
+- `src/app/layout.tsx` - Root layout with theme
+- `src/app/globals.css` - Global styles
+- `src/components/ui/` - shadcn/ui components
+- `src/components/DynamicBackground.tsx` - Animated background
+- `src/lib/utils.ts` - Utilities (cn helper, etc.)
+- `src/data/ui-radar-data.json` - Exported tool data
+- `prisma/schema.prisma` - Database schema
 
-prisma/
-└── schema.prisma         # Схема базы данных
-```
+## API Reference
 
-## Данные
-
-Все данные инструментов экспортированы в `/data/ui-radar-data.json`:
+Tool data type definition:
 
 ```typescript
 interface UITool {
@@ -141,99 +86,50 @@ interface UITool {
     community: number;
     performance: number;
   };
-  // ... и другие поля
 }
 ```
 
-## Категории инструментов
+## Tool Categories
 
-| Категория | Описание | Примеры |
-|-----------|----------|---------|
-| Фреймворки | JS фреймворки | React, Vue, Angular, Svelte, Solid.js |
-| Мета-фреймворки | Full-stack фреймворки | Next.js, Nuxt, SvelteKit, Astro |
-| Стилизация | CSS инструменты | Tailwind CSS |
-| UI Компоненты | Библиотеки компонентов | Shadcn, Mantine, Radix, MUI, Chakra, DaisyUI |
-| Иконки | SVG иконки | Lucide, Heroicons |
-| Анимации | Библиотеки анимаций | Framer Motion, GSAP |
+| Category | Description | Examples |
+|----------|-------------|----------|
+| Frameworks | JS frameworks | React, Vue, Angular, Svelte, Solid.js |
+| Meta-frameworks | Full-stack frameworks | Next.js, Nuxt, SvelteKit, Astro |
+| Styling | CSS tools | Tailwind CSS |
+| UI Components | Component libraries | Shadcn, Mantine, Radix, MUI, Chakra, DaisyUI |
+| Icons | SVG icon sets | Lucide, Heroicons |
+| Animations | Animation libraries | Framer Motion, GSAP |
 
 ## Tech Radar
 
-Классификация готовности технологий:
+| Ring | Description |
+|------|-------------|
+| ADOPT | Ready for production |
+| TRIAL | Try in pilot projects |
+| ASSESS | Study for future projects |
+| HOLD | Not recommended for new projects |
 
-| Кольцо | Цвет | Описание |
-|--------|------|----------|
-| ADOPT | | Готово к продакшену |
-| TRIAL | | Попробовать в пилотных проектах |
-| ASSESS | | Изучить для будущих проектов |
-| HOLD | | Не рекомендовать для новых проектов |
+## Ready-made Stacks
 
-## Готовые стеки
-
-| Стек | Сложность | Для кого |
-|------|-----------|----------|
-| React Starter | Easy | Начинающие |
-| Vue Starter | Easy | Начинающие |
-| Next.js Production | Medium | SSR проекты |
+| Stack | Difficulty | Target audience |
+|-------|-----------|-----------------|
+| React Starter | Easy | Beginners |
+| Vue Starter | Easy | Beginners |
+| Next.js Production | Medium | SSR projects |
 | Svelte Minimal | Easy | Landing pages |
-| Content Site | Easy | Блоги, документация |
+| Content Site | Easy | Blogs, documentation |
 
-## Вклад
+## Contributing
 
-Приветствуются любые улучшения:
-
-1. Fork репозитория
-2. Создайте ветку (`git checkout -b feature/amazing-feature`)
-3. Commit изменения (`git commit -m 'Add amazing feature'`)
-4. Push в ветку (`git push origin feature/amazing-feature`)
-5. Откройте Pull Request
-
-## Лицензия
-
-MIT License - используйте свободно
-
-
-**Сделано с используя Next.js, Tailwind CSS и Framer Motion**
-
-
-## Features
-
-- Feature 1 - description
-- Feature 2 - description
-
-
-## Tech Stack
-
-- **Framework** - Next.js, Nuxt
-- **Language** - TypeScript
-- **Styling** - Tailwind CSS, SVG, CSS, HTML
-- **Database** - Prisma, SQLite
-- **Libraries** - shadcn/ui, Framer Motion
-- **Tools** - React, Vue
-
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 20+ or Bun
-
-### Installation
-
-```bash
-git clone https://github.com/stsgs1980/UI-RADAR.git
-cd UI-RADAR
-bun install
-```
-
-### Run
-
-```bash
-bun run dev
-```
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
 [MIT](LICENSE)
 
 ---
-Built with: Next.js + Nuxt + Vue + React
+Built with: Next.js + React + TypeScript + Tailwind CSS + Framer Motion
